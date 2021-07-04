@@ -11,6 +11,31 @@ const tutorials = [
   'what is JSONP?'
 ];
 
+
+//bob = each array in splitArray that used to be a string?
+//charles = each element of each bob??
+
+// const titleCased = (titleArray) => {
+//   const splitArray = titleArray.map((titleString) => titleString.split(" "))
+//   console.log(splitArray)
+//   const titleStringTC = splitArray.map((bob) => bob.map((charles) => `${charles[0].toUpperCase()}${charles.slice(1)}`));
+//   console.log(titleStringTC)
+
+//   //return tutorials
+//   return titleStringTC
+// }
+
 const titleCased = () => {
-  return tutorials
+  const splitArray = tutorials.map((titleString) => titleString.split(" "))
+  console.log(splitArray)
+  const titleArrayTC = splitArray.map((bob) => bob.map((charles) => `${charles[0].toUpperCase()}${charles.slice(1)}`));
+  console.log(titleArrayTC)
+  const titleStringTC = titleArrayTC.map((gus) => gus.join(' '))
+  console.log(titleStringTC)
+
+
+  //return tutorials
+  return titleStringTC
 }
+
+titleCased(tutorials);
